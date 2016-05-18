@@ -1,0 +1,15 @@
+esearch:
+  image: daocloud.io/airywenter/elasticsearch-gui
+  privileged: true
+  user: root
+  volumes:
+  - /root/elastic-data:/usr/share/elasticsearch/data
+  ports:
+  - 9200:9200
+  - 9300:9300
+mongodb:
+  image: daocloud.io/mongo
+  ports:
+  - 27017:27017
+  volumes:
+  - /root/mongodb-data:/data/db
